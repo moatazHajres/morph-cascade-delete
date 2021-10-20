@@ -1,0 +1,27 @@
+{
+    "name": "moataz-hajres/morph-cascade-delete",
+    "description": "A simple laravel package to enable cascade deleting on polymorphic relations.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "laravel",
+        "polymorphic",
+        "morph",
+        "delete cascade"
+    ],
+    "autoload": {
+        "psr-4": {
+            "MoatazHajres\\MorphCascadeDelete\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Moataz Hajres",
+            "email": "moataz.hajres@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7|^8"
+    }
+}
