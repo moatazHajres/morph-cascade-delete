@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Database\Eloquent\Relations\Relation;
 use ReflectionClass;
 use ReflectionMethod;
+
 trait MorphCascadeDelete {
 
     /**
@@ -50,7 +51,7 @@ trait MorphCascadeDelete {
      */
     protected function getModelFinalMethods(ReflectionClass $modelReflection): array
     {
-        return $modelReflection->getMethods(ReflectionMethod::IS_FINAL);
+        return $modelReflection->getMethods(ReflectionMethod::IS_PUBLIC);
     }
 
     /**
@@ -62,9 +63,11 @@ trait MorphCascadeDelete {
         $morphManyRelations = [];
 
         foreach ($modelMethods as $method) {
-            if($this->isRelationMethod($method, $model)) {
-                if($this->isChildMorphRelation($method, $model)) {
-                    array_push($morphManyRelations, $method->getName());
+            if($method->isFinal()) {
+                if($this->isRelationMethod($method, $model)) {
+                    if($this->isChildMorphRelation($method, $model)) {
+                        array_push($morphManyRelations, $method->getName());
+                    }
                 }
             }
         }
