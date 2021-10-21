@@ -47,7 +47,7 @@ trait MorphCascadeDelete {
 
     /**
      *
-     * get all model final methods
+     * get all model public methods
      */
     protected function getModelFinalMethods(ReflectionClass $modelReflection): array
     {
