@@ -10,7 +10,7 @@ A simple laravel package to enable cascade deleting on polymorphic relations.
 Install with composer
 
 ```bash
-  composer require moatazHajres/morph-cascade-delete
+  composer require moataz-hajres/morph-cascade-delete
 ```
 
 ## Compatibility
