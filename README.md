@@ -13,8 +13,10 @@ Install with composer
   composer require moatazHajres/morph-cascade-delete
 ```
 
+## Compatibility
 
-    
+Tested on Laravel 8 with php 8, but it should work fine on laravel 6,7 with php ^7|^8.
+
 ## Usage
 
 1- Use the trait within models that has child morph relations.
