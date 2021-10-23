@@ -19,9 +19,11 @@ Tested on Laravel 8 with php 8, but it should work fine on laravel 6,7 with php 
 
 ## Usage
 
+Relation types Supported for now: `morphOne` - `morphMany` - `morphToMany`.
+
 1- Use the trait within models that has child morph relations.
 
-2- Make sure to define the morphOne/morphMany relation methods as `public` & `final`.
+2- Make sure to define the relation methods as `public` & `final`.
 
 ```php
 ....
@@ -36,7 +38,7 @@ class User extends Model {
 
 }
 
-...
+....
 ```
 That's it, you're all set!
 
